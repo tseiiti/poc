@@ -8,4 +8,4 @@ class Product(models.Model):
 	unit_price = models.FloatField()
 
 	def __str__(self):
-		return self.nome
+		return self.description

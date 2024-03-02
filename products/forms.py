@@ -9,5 +9,5 @@ class ProductForm(forms.ModelForm):
 	code = forms.CharField(label = 'Código')
 	description = forms.CharField(label = 'Descrição')
 	size = forms.CharField(label = 'Tamanho')
-	quantity = forms.IntegerField(label = 'Qunatidade')
+	quantity = forms.IntegerField(label = 'Quantidade')
 	unit_price = forms.FloatField(label = 'Preço Unitário')
