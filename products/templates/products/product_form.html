@@ -1,45 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Manter Produto</h1>
+<h1>{{ title }}</h1>
 
 <div class="row mt-4">
   <div class="col-md-8">
     <form method="post">
       {% csrf_token %}
-
-      <div class="mb-3">
-        {{ form.code.errors }}
-        <label for="id_code" class="form-label">Código</label>
-        <input type="text" class="form-control" name="code" maxlength="10" required="" id="id_code">
-      </div>
-    
-      <div class="mb-3">
-        {{ form.description.errors }}
-        <label for="id_description" class="form-label">Descrição</label>
-        <input type="text" class="form-control" name="description" maxlength="255" required="" id="id_description">
-      </div>
-    
-      <div class="mb-3">
-        {{ form.size.errors }}
-        <label for="id_size" class="form-label">Tamanho</label>
-        <input type="text" class="form-control" name="size" maxlength="10" required="" id="id_size">
-      </div>
-    
-      <div class="mb-3">
-        {{ form.quantity.errors }}
-        <label for="id_quantity" class="form-label">Quantidade</label>
-        <input type="number" class="form-control" name="quantity" required="" id="id_quantity">
-      </div>
-    
-      <div class="mb-3">
-        {{ form.unit_price.errors }}
-        <label for="id_unit_price" class="form-label">Preço Unitário</label>
-        <input type="number" class="form-control" name="unit_price" step="any" required="" id="id_unit_price">
-      </div>
-    
-      <button class="btn btn-primary mt-4 px-4" type="submit">Salvar</button>
-      <a class="btn btn-secondary mt-4 ms-2" href="{% url 'products:list' %}">Cancelar</a>
+      {% for field in form %}
+        <div class="mb-3">
+          {{ field.errors }}
+          <label for="{{ field.id_for_label }}" class="form-label">{{ field.label_tag }}</label>
+          {{ field }}
+        </div>
+      {% endfor %}
+      <a class="btn btn-secondary mt-4 px-4" href="{% url 'products:list' %}">Voltar</a>
+      <button class="btn btn-primary mt-4 ms-2 px-4" type="submit">Salvar</button>
     </form>
   </div>
 </div>

@@ -12,11 +12,19 @@ class ProductCreate(CreateView):
 	model = Product
 	form_class = ProductForm
 	success_url = reverse_lazy("products:list")
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+		context['title'] = 'Cadastrar Produto'
+		return context
 
 class ProductUpdate(UpdateView):
 	model = Product
-	fields = "__all__"
+	form_class = ProductForm
 	success_url = reverse_lazy("products:list")
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+		context['title'] = 'Atualizar Produto'
+		return context
 
 class ProductDetail(DetailView):
 	queryset = Product.objects.all()

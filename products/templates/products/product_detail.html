@@ -1,47 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Produto</h1>
+<h1>Visualizar Produto</h1>
 
-<div class="mt-5 mb-4">
-  
-  <div class="mb-3 row">
-    <label for="id_code" class="col-sm-2 col-form-label">Código:</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="id_code" value="{{ object.code }}" disabled readonly>
-    </div>
+<div class="row mt-4">
+  <div class="col-md-8">
+    {% include 'products/input_disabled.html' with id='code' label='Código' value=object.code %}
+    {% include 'products/input_disabled.html' with id='description' label='Descrição' value=object.description %}
+    {% include 'products/input_disabled.html' with id='size' label='Tamanho' value=object.size %}
+    {% include 'products/input_disabled.html' with id='quantity' label='Quantidade' value=object.quantity %}
+    {% include 'products/input_disabled.html' with id='unit_price' label='Preço Unitário' value=object.unit_price %}
+    <a class="btn btn-secondary mt-4 px-4" href="{% url 'products:list' %}">Voltar</a>
   </div>
-  
-  <div class="mb-3 row">
-    <label for="id_description" class="col-sm-2 col-form-label">Descrição:</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="id_description" value="{{ object.description }}" disabled readonly>
-    </div>
-  </div>
-  
-  <div class="mb-3 row">
-    <label for="id_size" class="col-sm-2 col-form-label">Tamanho:</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="id_size" value="{{ object.size }}" disabled readonly>
-    </div>
-  </div>
-  
-  <div class="mb-3 row">
-    <label for="id_quantity" class="col-sm-2 col-form-label">Quantidade:</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="id_quantity" value="{{ object.quantity }}" disabled readonly>
-    </div>
-  </div>
-  
-  <div class="mb-3 row">
-    <label for="id_unit_pricen" class="col-sm-2 col-form-label">Preço Unitário:</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="id_unit_pricen" value="{{ object.unit_price }}" disabled readonly>
-    </div>
-  </div>
-
 </div>
-<a class="btn btn-secondary px-3" href="{% url 'products:list' %}">Voltar</a>
 
 {% endblock %}
   
