@@ -1,18 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Visualizar Produto</h1>
+<h1>Excluir Produto</h1>
 
 <div class="row mt-4">
 	<div class="col-md-8">
+	<form method="post">
+		{% csrf_token %}
+
 		{% include 'products/input_disabled.html' with id='code' label='Código' value=object.code %}
 		{% include 'products/input_disabled.html' with id='description' label='Descrição' value=object.description %}
 		{% include 'products/input_disabled.html' with id='size' label='Tamanho' value=object.size %}
 		{% include 'products/input_disabled.html' with id='quantity' label='Quantidade' value=object.quantity %}
 		{% include 'products/input_disabled.html' with id='unit_price' label='Preço Unitário' value=object.unit_price %}
+
 		<a class="btn btn-secondary mt-4 px-4" href="{% url 'products:list' %}">Voltar</a>
+		<button class="btn btn-danger mt-4 ms-2 px-4" type="submit">Confirmar</button>
+		<p class="fst-italic text-secondary mt-2 mb-2">Tem certeza que deseja excluir o produto "{{ object }}"?</p>
+	</form>
 	</div>
 </div>
-
 {% endblock %}
-	

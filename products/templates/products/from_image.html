@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Cadastrar Produtos pela Nota Fiscal</h1>
+
+<div class="row mt-4">
+	<div class="col">
+		<form method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+
+			<div class="mb-3">
+				{{ form.errors }}
+				<label for="id_invoice" class="form-label">Informe o arquivo da Nota Fiscal</label>
+				<input class="form-control" type="file" id="id_invoice" name="invoice" required>
+			</div>
+
+			<a class="btn btn-secondary mt-4 px-4" href="{% url 'products:list' %}">Voltar</a>
+			<button class="btn btn-primary mt-4 ms-2" type="submit">Processar</button>
+		</form>
+	</div>
+</div>
+{% endblock %}

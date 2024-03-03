@@ -1,4 +1,4 @@
-from django.forms import ModelForm, TextInput, NumberInput
+from django.forms import ModelForm, TextInput, NumberInput, Form, CharField, FileField
 from .models import Product
 
 text_input = TextInput(attrs = { 'class': 'form-control' })
@@ -22,3 +22,6 @@ class ProductForm(ModelForm):
 			'quantity': 'Quantidade', 
 			'unit_price': 'Preço Unitário', 
 		}
+
+class UploadFileForm(Form):
+	invoice = FileField()
