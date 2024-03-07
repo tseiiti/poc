@@ -9,10 +9,14 @@ from PIL import Image
 import pytesseract
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 class ProductHandler():
-	def setup(self):
+	def setup(self, confirm, confirm_time):
 		self.driver = webdriver.Chrome()
+		self.confirm = confirm == "on"
+		self.wait = WebDriverWait(self.driver, int(confirm_time))
 	
 	def teardown(self):
 		self.driver.quit()
@@ -31,16 +35,24 @@ class ProductHandler():
 		self.driver.find_element(By.ID, "id_quantity").send_keys(quantity)
 		self.driver.find_element(By.ID, "id_unit_price").click()
 		self.driver.find_element(By.ID, "id_unit_price").send_keys(unit_price)
-		self.driver.find_element(By.CSS_SELECTOR, "button.btn-primary").click()
 
-def handle_file(f):
+		if self.confirm:
+			try:
+				# WebDriverWait(self.driver, 10).until(
+				self.wait.until(EC.presence_of_element_located((By.LINK_TEXT, "Novo Registro")))
+			except:
+				self.driver.find_element(By.CSS_SELECTOR, "button.btn-primary").click()
+		else:
+			self.driver.find_element(By.CSS_SELECTOR, "button.btn-primary").click()
+
+def handle_file(f, confirm, confirm_time):
 	image = Image.open(f)
 	text = pytesseract.image_to_string(image, lang='por')
 	texts = text.split('\n')
 	id_ini = texts.index('CÓDIGO DESCRIÇÃO DO PRODUTO / SERVIÇO TAMANHO QUANTIDADE VALOR UNITÁRIO VALOR TOTAL')
 	id_fim = texts.index('DADOS ADICIONAIS')
 	handler = ProductHandler()
-	handler.setup()
+	handler.setup(confirm, confirm_time)
 	for i in range(id_ini + 1, id_fim):
 		txts = texts[i].split()
 		if len(txts) > 5:
@@ -58,7 +70,9 @@ def from_image(request):
 	if request.method == 'POST':
 		form = UploadFileForm(request.POST, request.FILES)
 		if form.is_valid():
-			handle_file(request.FILES['invoice'])
+			confirm = request.POST.get("confirm")
+			confirm_time = request.POST.get("confirm_time")
+			handle_file(request.FILES['invoice'], confirm, confirm_time)
 			return redirect('products:list')
 
 	return render(request, 'products/from_image.html', { 'form': form })

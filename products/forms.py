@@ -1,4 +1,4 @@
-from django.forms import ModelForm, TextInput, NumberInput, Form, CharField, FileField
+from django.forms import ModelForm, TextInput, NumberInput, Form, FileField, BooleanField, IntegerField
 from .models import Product
 
 text_input = TextInput(attrs = { 'class': 'form-control' })
@@ -25,3 +25,6 @@ class ProductForm(ModelForm):
 
 class UploadFileForm(Form):
 	invoice = FileField()
+	confirm = BooleanField(required = False)
+	confirm_time = IntegerField(initial=10, required = False)
+	
