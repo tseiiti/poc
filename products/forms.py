@@ -11,6 +11,7 @@ class ProductForm(ModelForm):
 		widgets = {
 			'code': text_input, 
 			'description': text_input, 
+			'color': text_input, 
 			'size': text_input, 
 			'quantity': number_input, 
 			'unit_price': number_input, 
@@ -18,6 +19,7 @@ class ProductForm(ModelForm):
 		labels = {
 			'code': 'Código', 
 			'description': 'Descrição', 
+			'color': 'Cor', 
 			'size': 'Tamanho', 
 			'quantity': 'Quantidade', 
 			'unit_price': 'Preço Unitário', 
