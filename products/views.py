@@ -19,7 +19,7 @@ import os
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 CONTENT = "Peço que me informe quais são as descrições de produtos, código, valor unitário, " \
 				+ "tamanho, quantidade pedida e as cores das roupas que estão na nota fiscal a " \
-				+ "seguir de forma direta e precisa. A saída das informações deverá ser somete " \
+				+ "seguir de forma direta e precisa. A saída das informações deverá ser somente " \
 				+ "o array no formato JSON. Cada atributo deve ter uma chave, sendo, " \
 				+ "COD: para o código, " \
 				+ "DSC: para a descrição, " \
@@ -55,31 +55,56 @@ class ProductHandler():
 		self.driver.find_element(By.ID, "id_unit_price").click()
 		self.driver.find_element(By.ID, "id_unit_price").send_keys(unit_price)
 
+		print(code, description, color, size, quantity, unit_price)
 		if self.confirm:
 			try:
 				self.wait.until(pres((By.LINK_TEXT, "Novo Registro")))
 				return
 			except:
 				pass
+		print(self.confirm)
 		self.driver.find_element(By.CSS_SELECTOR, "button.btn-primary").click()
 
-def handle_file(file, confirm, confirm_time):
+def handle_file(file, use_gpt, confirm, confirm_time):
+	print("escaneando a imagem...")
 	image = Image.open(file)
-	text = pytesseract.image_to_string(image, lang='por')
-	
+	text = pytesseract.image_to_string(image, lang='por').strip()
+
 	handler = ProductHandler()
 	handler.setup(confirm, confirm_time)
+	
+	if use_gpt == "on": 
+		print("identificando dados com gpt...")
+		# com gpt
+		client = OpenAI(api_key = OPENAI_API_KEY)
+		completion = client.chat.completions.create(
+			model = "gpt-3.5-turbo",
+			messages = [
+				{ "role": "user", "content": CONTENT + text }
+			],
+			temperature = 0.2
+		)
+		itens = json.loads(completion.choices[0].message.content)
+	else: 
+		print("identificando dados pela posição dos textos...")
+		# sem gpt
+		texts = text.split('\n')
+		id_ini = texts.index('CÓDIGO DESCRIÇÃO DO PRODUTO / SERVIÇO TAMANHO QUANTIDADE VALOR UNITÁRIO VALOR TOTAL')
+		id_fim = texts.index('DADOS ADICIONAIS')
+		itens = []
+		for i in range(id_ini + 1, id_fim):
+			txts = texts[i].split()
+			if len(txts) > 5:
+				iten = {}
+				iten['COD'] = txts[0]
+				iten['DSC'] = ' '.join(txts[1:-4])
+				iten['COR'] = ''
+				iten['TAM'] = txts[-4]
+				iten['QTD'] = txts[-3]
+				iten['VAL'] = txts[-2]
+				itens.append(iten)
 
-	client = OpenAI(api_key = OPENAI_API_KEY)
-	completion = client.chat.completions.create(
-		model = "gpt-3.5-turbo",
-		messages = [
-			{ "role": "user", "content": CONTENT + text }
-		],
-		temperature = 0.2
-	)
-	itens = json.loads(completion.choices[0].message.content)
-
+	print("cadastro automático pelo selenium...")
 	for iten in itens:
 		handler.handle(iten['COD'], iten['DSC'], iten['COR'], iten['TAM'], iten['QTD'], iten['VAL'])
 	handler.teardown()
@@ -89,9 +114,10 @@ def from_image(request):
 	if request.method == 'POST':
 		form = UploadFileForm(request.POST, request.FILES)
 		if form.is_valid():
+			use_gpt = request.POST.get("use_gpt")
 			confirm = request.POST.get("confirm")
 			confirm_time = request.POST.get("confirm_time")
-			handle_file(request.FILES['invoice'], confirm, confirm_time)
+			handle_file(request.FILES['invoice'], use_gpt, confirm, confirm_time)
 			return redirect('products:list')
 
 	return render(request, 'products/from_image.html', { 'form': form })

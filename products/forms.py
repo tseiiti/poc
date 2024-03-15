@@ -1,4 +1,4 @@
-from django.forms import ModelForm, TextInput, NumberInput, Form, FileField, BooleanField, IntegerField
+from django.forms import ModelForm, TextInput, NumberInput, Form, CharField, FileField, BooleanField, IntegerField
 from .models import Product
 
 text_input = TextInput(attrs = { 'class': 'form-control' })
@@ -24,9 +24,11 @@ class ProductForm(ModelForm):
 			'quantity': 'Quantidade', 
 			'unit_price': 'Preço Unitário', 
 		}
+	color = CharField(widget=text_input, label='Cor', required=False)
 
 class UploadFileForm(Form):
 	invoice = FileField()
+	use_gpt = BooleanField(required = False)
 	confirm = BooleanField(required = False)
 	confirm_time = IntegerField(initial=10, required = False)
 	
