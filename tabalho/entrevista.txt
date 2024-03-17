@@ -1,0 +1,157 @@
+Objetivos da entrevista:
+- identificar as etapas do processo de compra;
+- identificar as formas do usuário na pesquisa do produto;
+- identificar as formas (etapas ou processos) de negociação;
+- identificar as formas (etapas ou processos) de envio do pedido;
+- identificar as formas (etapas ou processos) de recebimento;
+- identificar as formas (etapas ou processos) de pagamento;
+- verificar a existência de outras etapas ou processos de compra como agendamento, revisão/aprovação, contrato, controle de gastos ou devolução;
+- verificar a existência de formas para automatizar as compras;
+- verificar a existência de padrões de compras;
+- identificar as dificuldades no processo de compra;
+- identificar soluções pensadas ou desejadas do usuário;
+
+===========================================================
+Loja pequena de roupa infantil
+Feito via ligação no whatsapp
+Duração: cerca de 2h
+
+===========================================================
+
+Quais são as etapas ou como é o processo de compra?
+  Existe 3 formas: convite ao show room; representante vai a loja; ou pelo atacadista.
+
+Como funciona esse "convite ao show room?
+  O lojista recebe um convite ao show room, que tem uma data marcada. Nem todas as marcas trabalham com show room.
+  Esse evento acontece 2 vezes ao ano: para produtos de inverno, no mês de novembro ou dezembro, para receber o produto em março ou abril; e para os produtos de verão acontece em junho ou julho, para receber o produto em outubro ou novembro.
+  Os pedidos são feitos no local, onde ficam os vendedores com os mostruários, e através de um sistema instalado em tablet ou notebook.
+  Existe vantagens e desvantagens: é possível ver todos os produtos, comparar e escolher, é possível negociar a forma de pagamento e saber o prazo de entrega, mas é obrigatório comprar toda a grade, isto é, 2 peças de cada tamanho daquela cor/modelo.
+
+E no caso do representante que vai a loja?
+  Geralmente ele liga e marca um horário, mas ele pode aparecer de repente ou se estiver por perto ele liga dizendo que está passando na loja.
+  No geral são representantes de fábricas (marcas) que não participam do show room, por serem menores. E alguns vendedores podem representar diversas fábricas.
+  Pode acontecer do representante aparecer somente com um catálogo com fotos, mas geralmente ele traz uma peça de cada modelo.
+  O vendedor anota o pedido, através do sistema instalado em um tablet ou por um bloco de pedidos em papel. E ele envia os pedidos diretamente às fábricas, que informa o prazo de entrega aproximado.
+  É comum também ligar para o representante para pedir mais produtos caso a quantidade do pedido fosse maior.
+
+E por atacado?
+  A compra é principalmente para reposição. Isto é, supondo-se que foi comprado uma grade de certo modelo, e o tamanho M acabou rapidamente; Então é possível ir (de carro) até um atacadista, que geralmente encontra-se no bairro do Brás, e fazer o pedido somente daquele tamanho (e trazer no porta-malas).
+  No início, quando não tínhamos muita experiência, íamos sempre ao Brás e comprávamos a maior parte do estoque dessa forma, mas com o tempo mostrou-se desvantajoso, isto é, é mais fácil planejar uma compra maior com os representantes de venda do que ir frequentemente ao Brás.
+  É possível fazer o pedido por telefone, caso já se tenha definido o produto que quer comprar, ou pode acontecer do atacadista entrar em contato oferecendo novidades que pode ser acessado por um site.
+  Geralmente peço produtos como tiara, presilha de cabelo, gravatas, etc para um atacadista conhecido por telefone e em poucos dias a transportadora me entrega.
+
+Então a compra só acontece duas vezes ao ano?
+  Para as roupas de coleção, sim. Mas produtos como sapato social, vestido de casamento para meninas, terno para meninos, tiara, brinco, pulseira, meias, tenis, e diversos outros produtos são comprados fora desse período. Isso sem contar as reposições.
+  Existem produtos de meia estação (outono-inverno e primavera-verão), mas não costumo trabalhar com esses modelos.
+
+Quais são as marcas de roupas que sua loja trabalha?
+  Existem marcas que compramos mais e outras menos. Vai depender do preço, facilidade do pagamento e oportunidade, que pode ser um modelo atraente, ou a falta daquele tipo de produto, ou um desconto especial.
+  Mas algumas marcas que trabalhamos:
+    - malwee / carinhoso
+    - marisol
+    - lilica ripilica
+    - brandili
+    - turma da malha
+    - mil cores
+    - panpili
+    - pimpolho
+    - hering kids
+    - milon
+    - elian
+    - trifil
+    - sapato redmax social
+
+Existia alguma forma de negociação?
+  Prazo e desconto. Isto é, ou aumenta-se o prazo para pagamento ou aumenta-se o desconto. Muitas vezes as marcas já possui os valores predefinidos no sistema e o representante não tem controle, então o cliente escolhe se quer mais prazo ou se quer mais desconto e o sistema calcula. Para fábricas (marcas) maiores é possível ter ainda mais desconto ou prazo em casos de compras maiores ou no inicio da coleção (quando a fábrica tem mais tempo para a produção)
+
+Como funciona o transporte e recebimento dos produtos?
+  Pela transportadora. Mas pode acontecer do próprio representante vir entregar.
+  Quando se faz um pedido, uma cópia é enviada para o e-mail da loja com a data da entrega, que é aproximado.
+
+E o pagamento?
+  Todas as marcas trabalham com pagamento parcelado após a emissão da nota fiscal. No geral é parcelado de 30 em 30 dias, mas algumas fábricas exigem pagamentos de 15 em 15 dias, outras oferecem prazos como primeiro pagamento em 45 dias (e demais em 30). É possível ter descontos com pagamento à vista, mas não fazemos.
+
+Como é o controle de gastos?
+  Assim que recebemos a mercadoria, recebemos também os boletos de pagamento. Eu coloco esses boletos ordenados por data em uma pasta e todos os dias olho quais são os boletos que preciso pagar.
+
+Já houve necessidade de devolução da compra?
+  Uma única vez. Não me recordo bem, mas liquei para a fábrica e eles mandaram uma transportadora vir buscar a parte do pedido para devolução.
+
+Quais são as principais dificuldades ao realizar essas compras?
+  Algo muito trabalhoso é cadastrar os produtos de forma correta no sistema da loja. No período de entrega recebemos produtos várias vezes na semana. Precisamos cadastrar cada produto, seu código de barras, descrição, cor, marca, modelo, preço, e outras informações. E não podemos cadastrar errado e não pode faltar nenhum produto. E algo que é inaceitável, é ter o produto, ter um cliente na loja que quer comprar e não poder vender porque ainda não foi cadastrado. Houve épocas que não utilizávamos o sistema interno da loja pelo trabalho do cadastro. Hoje ficamos horas e horas a mais nesse período de entrega para podermos cadastrar todos os produtos.
+  Outra dificuldade é definir o limite de compra, já que está relacionado com a previsão de vendas. É difícil saber se nossos clientes irão realmente comprar os produtos. Por exemplo, se em algum ano o inverno não for tão frio as roupas de inverno não vendem, enquanto que para a coleção de verão é possível se arriscar mais, já que a região permite usar esse tipo de roupa por um período mais longo.
+
+O que você acha que seria bom ter em um sistema de compras?
+  DATA DE COMPRA. Para fazer busca pela data de compra. (para encontrar produtos encalhados)
+  Chave de acesso para acessar a receita federal.
+
+===========================================================
+Observações:
+  Não tinha controle de gastos;
+  Não tinha controle de estoque;
+  Não se compra direto da fábrica;
+  Não compro pela internet 
+
+===========================================================
+Outras dúvidas que surgiram
+Como é feito a pesquisa dos produtos?
+É necessário fazer a pesquisa do fornecedor?
+Como é identificado a necessidade da compra?
+É necessário consultar a nota fiscal eletrônica?
+
+===========================================================
+Sugestão de Requisitos:
+* login
+* Gerenciar Usuários
+* Lembrete de Compras (cadastrar produtos que deseja ou precisa comprar ou repor)
+* Gerenciar Fornecedor (marca/fabricante)
+  * Gerenciar Representante (vendedor/contato)
+* Gerenciar Categorias (de produtos - muitos para muitos)
+* Gerenciar Compras (inserir ordem de compra)
+  * Gerenciar Produtos
+    - pode ser por api de estoque se a tabela de produtos estiver em estoque
+  * Receber Compra
+    - alterar status da compra para recebido
+    - incluir produtos no estoque (chamar api de estoque)
+    - ativar as parcelas a serem pagas
+  * Registrar Pagamento de Parcela
+    - pago em dia
+    - pago com atraso
+* Gerenciador de Custo
+  - consultar valor por compra (por nota fiscal)
+  - consultar valor por produto (cada produto da nota fiscal)
+  - consultar quantidade e total gasto por período/categoria (gráfico dinâmico)
+  - consultar valor pago e valor pendente por nota fiscal (de notas pendentes de pagamento)
+  - consultar boletos pagos e não pagos por dia
+    - para cada dia consultar total por banco e por compra (nota fiscal)
+  - projeção de totais com simulador de compras
+
+===========================================================
+Ideias:
+Api para lembrete de compras
+  Ex: se o estoque estiver baixo para um determinado produto o sistema de estoque pode acessar essa api para incluir um lembrete, informando o produto, a quantidade restante, data desejada de recebimento, e outras informações para indicar a necessidade de uma reposição
+
+Tela/Relatório com todos os boletos pagos e não pagos, com valor, data de vencimento e referência do produto
+  acrescentar total por dia, total por banco, total por fabricante
+
+Opção de registrar pagamento de todos os boletos na primeira tela por configuração para o usuário.
+
+
+
+
+
+
+
+
+
+Rascunho
+
+Quão importante você considera cada um dos processos de compra?
+1. Identificação e análise da necessidade da compra
+2. Processo de criação da solicitação
+3. Pesquisa do fornecedor e produto
+4. Criação do pedido de proposta
+5. Negociação de custos e condições de contrato
+6. Aprovação da compra
+7. Emissão de ordem de compra
+8. Acompanhamento pós compra

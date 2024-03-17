@@ -30,16 +30,17 @@ CONTENT = "Peço que me informe quais são as descrições de produtos, código,
 				+ "Segue a nota fiscal: "
 
 class ProductHandler():
-	def setup(self, confirm, confirm_time):
+	def setup(self, confirm, confirm_time, url_list):
 		self.driver = webdriver.Chrome()
 		self.confirm = confirm == "on"
 		self.wait = WebDriverWait(self.driver, int(confirm_time))
+		self.url_list = url_list
 	
 	def teardown(self):
 		self.driver.quit()
 
 	def handle(self, code, description, color, size, quantity, unit_price):
-		self.driver.get('http://localhost:8000/products/list/')
+		self.driver.get(self.url_list)
 		self.driver.set_window_size(1200, 1000)
 		self.driver.find_element(By.LINK_TEXT, "Novo Registro").click()
 		self.driver.find_element(By.ID, "id_code").click()
@@ -65,13 +66,13 @@ class ProductHandler():
 		print(self.confirm)
 		self.driver.find_element(By.CSS_SELECTOR, "button.btn-primary").click()
 
-def handle_file(file, use_gpt, confirm, confirm_time):
+def handle_file(file, use_gpt, confirm, confirm_time, url_list):
 	print("escaneando a imagem...")
 	image = Image.open(file)
 	text = pytesseract.image_to_string(image, lang='por').strip()
 
 	handler = ProductHandler()
-	handler.setup(confirm, confirm_time)
+	handler.setup(confirm, confirm_time, url_list)
 	
 	if use_gpt == "on": 
 		print("identificando dados com gpt...")
@@ -117,7 +118,8 @@ def from_image(request):
 			use_gpt = request.POST.get("use_gpt")
 			confirm = request.POST.get("confirm")
 			confirm_time = request.POST.get("confirm_time")
-			handle_file(request.FILES['invoice'], use_gpt, confirm, confirm_time)
+			url_list = request.build_absolute_uri().replace(str(reverse_lazy('products:from_image')), str(reverse_lazy('products:list')))
+			handle_file(request.FILES['invoice'], use_gpt, confirm, confirm_time, url_list)
 			return redirect('products:list')
 
 	return render(request, 'products/from_image.html', { 'form': form })
