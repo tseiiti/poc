@@ -15,6 +15,7 @@ Objetivos da entrevista:
 Loja pequena de roupa infantil
 Feito via ligação no whatsapp
 Duração: cerca de 2h
+Data: 14/03
 
 ===========================================================
 
@@ -60,6 +61,12 @@ Quais são as marcas de roupas que sua loja trabalha?
     - elian
     - trifil
     - sapato redmax social
+  Grade:
+    - P, M, G, GG
+    - 1, 2, 3 (bebês)
+    - 2, 4, 6 (crianças pequenas)
+    - 8, 10, 12 (crianças)
+    - 14, 16, 18 (pré-adolecentes)
 
 Existia alguma forma de negociação?
   Prazo e desconto. Isto é, ou aumenta-se o prazo para pagamento ou aumenta-se o desconto. Muitas vezes as marcas já possui os valores predefinidos no sistema e o representante não tem controle, então o cliente escolhe se quer mais prazo ou se quer mais desconto e o sistema calcula. Para fábricas (marcas) maiores é possível ter ainda mais desconto ou prazo em casos de compras maiores ou no inicio da coleção (quando a fábrica tem mais tempo para a produção)
@@ -95,9 +102,13 @@ Observações:
 ===========================================================
 Outras dúvidas que surgiram
 Como é feito a pesquisa dos produtos?
+  não há necessidade, já que a marca sempre oferece todas as informações
 É necessário fazer a pesquisa do fornecedor?
+  não, a experiência permite saber se o produto é bom ou não. E o pagamento é sempre após o recebimento do produto.
 Como é identificado a necessidade da compra?
+  todas as necessidades são sanadas pelas ofertas das fábricas.
 É necessário consultar a nota fiscal eletrônica?
+  era só pra ajudar no captação da descrição
 
 ===========================================================
 Sugestão de Requisitos:
