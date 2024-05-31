@@ -75,7 +75,7 @@ DATABASES = {
 		'ENGINE': 'djongo',
 		'NAME': 'poc',
 		'CLIENT': {
-			'host': os.getenv('HOST') if os.getenv('HOST') else 'mongodb://root:root@localhost/'
+			'host': os.getenv('HOST') if os.getenv('HOST') else 'mongodb://localhost/'
 		}
 	}
 }
